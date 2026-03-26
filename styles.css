@@ -561,3 +561,279 @@ body {
         width: 100%;
     }
 }
+
+/* ==================== CREDENTIALS PANEL (Builder) ==================== */
+.credentials-panel {
+    /* inherits from outer #credentialsPanel container */
+}
+
+/* ==================== SHARED FORM VIEWER ==================== */
+#sharedFormViewer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #004080, #002856);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Login Gate Card ---------- */
+.shared-login-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.shared-login-logo {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.shared-login-logo .logo-icon {
+    font-size: 44px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.shared-login-logo h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: #004080;
+    font-weight: 700;
+}
+
+.shared-login-logo p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.shared-login-msg {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.shared-login-msg.error {
+    background: #fff0f0;
+    border: 1px solid #ffcccc;
+    color: #cc0000;
+}
+
+.shared-login-msg.success {
+    background: #f0fff4;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.shared-login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shared-field-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.shared-field-group input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 2px solid #d0d9e8;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.shared-field-group input:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 0 3px rgba(0,64,128,0.1);
+}
+
+.shared-login-btn {
+    background: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-family: 'Inter', sans-serif;
+}
+
+.shared-login-btn:hover { background: #003060; }
+.shared-login-btn:active { transform: scale(0.98); }
+
+/* Shake on wrong password */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-8px); }
+    40%       { transform: translateX(8px); }
+    60%       { transform: translateX(-6px); }
+    80%       { transform: translateX(6px); }
+}
+.shake { animation: shake 0.45s ease; }
+
+/* ---------- Shared Form Questions Card ---------- */
+.shared-form-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+}
+
+.shared-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #004080;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+}
+
+.shared-form-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #004080;
+    font-weight: 700;
+}
+
+.shared-form-user {
+    font-size: 12px;
+    color: #555;
+    background: #f0f5ff;
+    border: 1px solid #c5d8f5;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.shared-form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shared-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.shared-form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.req-star {
+    color: #cc0000;
+    margin-left: 3px;
+}
+
+.shared-input {
+    width: 100%;
+    padding: 10px 13px;
+    border: 2px solid #d0d9e8;
+    border-radius: 7px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.shared-input:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 0 3px rgba(0,64,128,0.08);
+}
+
+.shared-option-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.gps-btn {
+    white-space: nowrap;
+    padding: 10px 14px;
+    background: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.gps-btn:hover { background: #003060; }
+
+.sig-canvas {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    background: #fafafa;
+    border: 2px solid #d0d9e8;
+    border-radius: 7px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.shared-submit-btn {
+    margin-top: 28px;
+    width: 100%;
+    padding: 14px;
+    background: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-family: 'Inter', sans-serif;
+}
+
+.shared-submit-btn:hover:not(:disabled) { background: #003060; }
+.shared-submit-btn:active:not(:disabled) { transform: scale(0.99); }
+.shared-submit-btn:disabled {
+    background: #6c9bbf;
+    cursor: not-allowed;
+}
+
+/* Responsive shared form */
+@media (max-width: 480px) {
+    .shared-login-card,
+    .shared-form-card {
+        padding: 24px 20px;
+    }
+
+    .shared-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
